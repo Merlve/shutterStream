@@ -1,39 +1,27 @@
-#scroll-container {
-    border: 3px solid black;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  #scroll-text {
-    /*animationproperties*/-moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
-}
-  
-  /* for Firefox */
-  @-moz-keyframes my-animation {
-    from { -moz-transform: translateX(100%); }
-    to { -moz-transform: translateX(-100%); }
-  }
-  
-  /* for Chrome */
-  @-webkit-keyframes my-animation {
-    from { -webkit-transform: translateX(100%); }
-    to { -webkit-transform: translateX(-100%); }
-  }
-  
-  @keyframes my-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
+@keyframes scroll {
+    0% {
       transform: translateX(100%);
     }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
+    100% {
       transform: translateX(-100%);
     }
-}
+  }
+
+  /* Apply smooth scrolling animation to the text */
+  #scroll-container {
+    overflow: hidden;
+    width: 100%; /* Adjust width according to your design */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  #scroll-text {
+    display: inline-block;
+    animation: scroll 10s linear infinite; /* Adjust animation duration as needed */
+    color: white;  
+  }
+
+  /* Optional: Center the text horizontally */
+  .horizontal-center {
+    display: flex;
+    justify-content: center;
+  }
