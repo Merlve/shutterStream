@@ -14,7 +14,9 @@
     -moz-animation: my-animation 25s linear infinite;
     -webkit-animation: my-animation 25s linear infinite;
     animation: my-animation 25s linear infinite;
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */   
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */  
+    font-weight: bold; /* Set font weight to bold */
+    font-size: 1.2em; /* Increase font size slightly */   
 }
   
   /* for Firefox */
